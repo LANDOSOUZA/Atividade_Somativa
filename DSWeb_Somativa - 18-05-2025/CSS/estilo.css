@@ -1,0 +1,626 @@
+/* =============================== */
+/*       Estilização Global        */
+/* =============================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* =============================== */
+/*       Configuração do Banner    */
+/* =============================== */
+.tamanho-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Ocupa toda a altura da viewport */
+  overflow: hidden;
+}
+
+.banner-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =============================== */
+/*      Container de Sobreposição  */
+/* =============================== */
+.logotipo-sobreposto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/*         Navbar no Topo          */
+/* =============================== */
+/* Exemplo da Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  /* Sem position absoluto, para ficar dentro do fluxo da navbar */
+  margin-right: 10px;
+}
+
+.technova-title {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-items {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+  gap: 20px
+}
+
+/* Empurra o último item para a direita */
+.navbar-items li:last-child {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.btn_inscricao {
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Texto de Boas-Vindas */
+.text_saudacao {
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15vh;;
+}
+
+.text_saudacao h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.text_saudacao p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.btn-descubra,
+.btn-saibaMais {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.btn-descubra {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: bold;
+}
+
+.btn-saibaMais {
+  background-color: #fff;
+  color: black;
+  font-weight: bold;
+}
+
+.btn_inscricao:hover,
+.btn-saibaMais:hover,
+.btn-descubra:hover{
+  background-color: rgb(231, 194, 124);
+}
+
+/* =============================== */
+/*         Seção Quem Somos        */
+/* =============================== */
+.sobreNos {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.conteudo {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  gap: 40px; /* Espaçamento entre texto e imagem */
+}
+
+/* Aplicando o mesmo padrão de tipografia dos textos de boas-vindas */
+.sobreNosTexto {
+  width: 40%;                 /* Pode ajustar conforme o layout desejado */
+  color: black;                /* Mesma cor usada na área de boas-vindas */
+  text-align: justify;
+  font-family: Arial, sans-serif; /* Mesmo font-family se for o caso */
+}
+
+.sobreNosTexto h2 {
+  font-size: 48px;            /* Igual ao tamanho do h1 da área de boas-vindas */
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.sobreNosTexto p {
+  font-size: 20px;            /* Tamanho de fonte igual ao parágrafo da área de boas-vindas */
+  line-height: 1.5;
+}
+
+.sobreNosImagem {
+  width: 60%;
+  display: flex;
+  justify-content: center;    
+}
+
+.sobreNosImagem img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =============================== */
+/*         Seção de Destaques      */
+/* =============================== */
+.destaque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;           /* Gap reduzido de 30px para 20px entre as colunas */
+  padding: 40px 30px;  /* 40px para topo/rodapé e 30px para as margens laterais */
+}
+
+.item-destaque {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 30%; /* Mantém equilíbrio entre elementos, permanecendo inalterado */
+}
+
+.icone {
+  width: 40px;
+  height: auto;
+}
+
+.icone-preto {
+  filter: invert(1);
+}
+
+.texto-destaque h4 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.texto-azul {
+  color: #007bff;
+}
+
+.texto-destaque p {
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* =============================== */
+/*     Seção Nossas Funcionalidades */
+/* =============================== */
+.funcionalities {
+  padding: 50px 30px;           /* 30px nas margens laterais */
+  display: flex;
+  align-items: center;
+  justify-content: center;      /* Centraliza o container interno */
+  text-align: left;
+}
+
+.conteudo-funcionalidades {
+  display: flex;
+  max-width: 1200px;        /* Largura máxima do container */
+  width: 100%;              /* Largura total do container */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+/* Define a largura do bloco de texto (à esquerda) para que, junto com a imagem, some 100% */
+.container-funcionalidades {
+  width: 50%;               /* Texto ocupará 40% do grupo */
+  margin-right: 0;          /* Garante que não haja espaço extra à direita */
+}
+
+.container-funcionalidades p {
+  white-space: pre-line;
+}
+
+.textos-recursos {
+  flex: 1;                /* Permite que o texto ocupe o espaço restante */
+  text-align: justify;
+}
+
+.itens-recursos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.textos-recursos h3 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  white-space: normal;          /* Permite que o <br> quebre a linha conforme desejado */
+}
+
+.textos-recursos p {
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: justify;
+  margin-bottom: 0;
+  white-space: normal;      /* Permite que o <br> quebre a linha conforme desejado */
+}
+
+.icone-pequeno {
+  align-self: center;
+  width: 20px;
+}
+
+.texto-negrito {
+  font-weight: bold;
+}
+
+.imagem-funcionalidades {
+  width: 50%;                   /* Espaço destinado à imagem */
+  display: flex;
+  justify-content: flex-start;  /* Alinha a imagem à esquerda do container */
+}
+
+.imagem-funcionalidades img {
+  width: 100%;                  /* Faz a imagem preencher totalmente o container */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =============================== */
+/*         Seção de Serviços       */
+/* =============================== */
+.servicos {
+  padding: 50px 150px;     /* 50px vertical e 150px nas laterais */
+  box-sizing: border-box;  /* Inclui padding na largura total */
+  display: flex;
+  justify-content: center;
+}
+
+.container-servicos {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Centraliza o grupo (imagem + texto) */
+  gap: 20px;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.imagem-servicos {
+  width: 70%;
+}
+
+.imagem-servicos img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.conteudo-servicos {
+  width: 50%;
+  text-align: justify;
+}
+
+/* Itens individuais (ícone + texto) */
+.item-servicos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icone-pequeno {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Textos dos itens – cabeçalhos e parágrafos */
+.texto-servicos h3 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  white-space: normal;
+}
+
+.texto-servicos p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
+  white-space: normal;
+}
+
+/* Cabeçalho e parágrafos gerais dentro de .conteudo-servicos */
+.conteudo-servicos h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  white-space: normal;
+}
+
+.conteudo-servicos p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  white-space: normal;
+}
+
+/* =============================== */
+/*            Neotícias           */
+/* =============================== */
+.noticias {
+  border: 1px solid #000;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.noticias h1 {
+  font-size: 48px; /* Padronizado conforme os títulos principais */
+  margin-bottom: 20px;
+}
+
+.noticias h3 {
+  font-size: 32px; /* Igual aos subtítulos das outras seções */
+  margin-bottom: 15px;
+}
+
+.noticias p {
+  font-size: 20px; /* Mesmo tamanho dos parágrafos das demais seções */
+  line-height: 1.4;
+  margin-bottom: 20px;
+  white-space: normal;
+}
+
+.botoes-noticias {
+  margin-top: 15px;
+}
+
+/* Botões padronizados para ficarem do mesmo tamanho dos outros */
+.btn-cadastro,
+.btn-conhecimento {
+  display: inline-block;
+  padding: 15px 30px;   /* Aumentado em relação ao original para ficar proporcional */
+  font-size: 20px;      /* Tamanho de fonte equivalente ao dos parágrafos */
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+
+.btn-cadastro {
+  background: transparent;
+  color: #000;
+}
+
+.btn-conhecimento {
+  background-color: rgb(105, 105, 235);
+  color: #000;
+}
+
+.btn-cadastro:hover,
+.btn-conhecimento:hover {
+  background-color: rgb(231, 194, 124);
+}
+
+footer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+/* ===== Media Queries para telas até 768px ===== */
+@media (max-width: 768px) {
+  /* Ajustes na Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-items {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .navbar-items li:last-child {
+    margin-left: 0;
+  }
+  
+  /* Ajustes no Banner de Saudação */
+  .text_saudacao h1 {
+    font-size: 36px;
+  }
+  
+  .text_saudacao p {
+    font-size: 18px;
+  }
+  
+  /* Seção Quem Somos: Empilhando as colunas */
+  .conteudo {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .sobreNosTexto,
+  .sobreNosImagem {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Seção de Destaques: disposição em coluna */
+  .destaque {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .item-destaque {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Seção Nossas Funcionalidades: Empilhar os elementos */
+  .conteudo-funcionalidades {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .container-funcionalidades,
+  .imagem-funcionalidades {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .imagem-funcionalidades {
+    justify-content: center;
+  }
+  
+  /* Seção de Serviços: mudar para coluna e reduzir padding */
+  .servicos {
+    padding: 30px 20px;
+    flex-direction: column;
+  }
+  
+  .container-servicos {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .imagem-servicos,
+  .conteudo-servicos {
+    width: 100%;
+  }
+  
+  /* Seção Neotícias: Diminuir proporcionalmente as fontes e paddings */
+  .noticias {
+    padding: 20px;
+  }
+  
+  .noticias h1 {
+    font-size: 36px;
+  }
+  
+  .noticias h3 {
+    font-size: 28px;
+  }
+  
+  .noticias p {
+    font-size: 18px;
+  }
+  
+  .btn-cadastro,
+  .btn-conhecimento {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+/* ===== Media Queries para telas até 480px ===== */
+@media (max-width: 480px) {
+  /* Ajuste geral nos tamanhos dos textos das principais seções */
+  .text_saudacao h1 {
+    font-size: 28px;
+  }
+  
+  .text_saudacao p {
+    font-size: 16px;
+  }
+  
+  /* Botões em área de inscrição e serviços */
+  .btn_inscricao,
+  .btn-descubra,
+  .btn-saibaMais {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+  
+  /* Seção Quem Somos: Reduzir tamanhos dos títulos e parágrafos */
+  .sobreNosTexto h2 {
+    font-size: 32px;
+  }
+  
+  .sobreNosTexto p {
+    font-size: 16px;
+  }
+  
+  /* Seção Neotícias: Ajustar os tamanhos dos textos */
+  .noticias h1 {
+    font-size: 32px;
+  }
+  
+  .noticias h3 {
+    font-size: 24px;
+  }
+  
+  .noticias p {
+    font-size: 16px;
+  }
+}
